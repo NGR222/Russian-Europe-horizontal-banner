@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Русская Европа</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body class="page">
+
+  <div id="popup" class="popup">
+    <div class="popup__content">
+      <span id="close-popup" class="popup__close">&times;</span>
+      <p>ООО «ВЕСТА»</p>
+      <p>ИНН: 3906957034  </p>
+      <p></p>
+    </div>
+  </div>
+
+  <a href=""  target="_blank">
+    <article class="banner">
+      <button id="open-popup" class="popup-button">Реклама</button>
+      <div class="right-side">
+        <img class="logo" src="./logo.svg" alt="">
+        <p class="preface">Открой для себя</p>
+        <h1 class="titel">Русскую Европу</h1>
+        <p class="information">ООО Специализированный застройщик «Инвестиционная Компания «АвангардИнвестПроект». Проектная документация на сайте наш.дом.рф. Тел.: +7 (800) 5119930</p>
+      </div>
+      <div class="left-side">
+        <img class="person" src="./person2.png" alt="">
+        <img class="building" src="./building.png" alt="">
+        <div class="button-container">
+          <span class="button">Узнать подробнее</span>
+        </div>
+        <img class="dom" src="./dom_rf.svg" alt="">
+      </div>
+    </article>
+  </a>
+
+  <script>
+    const popup = document.getElementById('popup');
+    const openPopupButton = document.getElementById('open-popup');
+    const closePopupButton = document.getElementById('close-popup');
+
+    openPopupButton.addEventListener('click', (event) => {
+    event.stopPropagation(); 
+    event.preventDefault();
+    popup.style.display = 'flex';
+    });
+
+    closePopupButton.addEventListener('click', () => {
+      popup.style.display = 'none'; 
+    });
+
+    popup.addEventListener('click', (event) => {
+       if (event.target === popup) {
+         popup.style.display = 'none';
+       }
+     });
+  </script>
+
+</body>
+</html>
