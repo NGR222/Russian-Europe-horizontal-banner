@@ -84,7 +84,6 @@ img {
 
 .page {
   max-inline-size: 1326px; 
-  font-family: 'Garet', 'Roboto', Arial, sans-serif;
 }
 
 .popup {
@@ -128,7 +127,7 @@ img {
   font-weight: 500;
   background-color: transparent;
   padding: 0 5px;
-  color: white;
+  color: rgba(255, 255, 255, 0.524);
   border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
@@ -199,7 +198,6 @@ img {
   width: clamp(31.5rem, 13.806rem + 31.455vw, 39.875rem); 
   position: absolute; 
   top: -17px; 
-  /* top: clamp(0rem, 2.245rem + -3.991vw, -1.063rem);   */
   right: 328px;
   right: clamp(8.313rem, -17.436rem + 45.775vw, 20.5rem);
   z-index: 2;
@@ -368,6 +366,8 @@ img {
     margin-left: 24px;
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .logo {
@@ -420,7 +420,6 @@ img {
 }
 
 @media (max-width: 400px) {
-  
   .building {
     bottom: -172px;
     right: -260px;
@@ -437,7 +436,22 @@ img {
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 295px) {
+  .titel {
+    font-size: 42px;
+  }
+
+  .preface {
+    font-size: 11px;
+  }
+
+  .dom {
+    width: 78px;
+    right: -121px;
+  }
+}
+
+@media (max-width: 250px) {
   .banner {
     display: none;
   }
